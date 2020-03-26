@@ -7,7 +7,6 @@
                     frameborder="0"
             />
         </div>
- 
 
             <div>
             <img :src="urlImage" class="card-img" alt="">
@@ -26,7 +25,6 @@
                 <p class="card-text">titi toto></p>
             </div>
             </div>
-
     </div>
 </template>
 
@@ -66,8 +64,10 @@ export default {
         this.urlImage = "http://image.tmdb.org/t/p/w342/"+ this.movie.poster_path
     },
     methods:{
-        getUrl:function(id,arg = ''){
-            return "https://api.themoviedb.org/3/movie/"+id+arg+"?api_key=" + process.env.VUE_APP_API_KEY;
+        getUrl:function(id_du_film,arg = ''){
+            return "https://api.themoviedb.org/3/movie/"+id_du_film+arg+"?api_key=" + process.env.VUE_APP_API_KEY;
+
+            //https://api.themoviedb.org/3/movie/".$id_du_film."?api_key=".APIKEY
         }
     }
     

@@ -1,11 +1,8 @@
 export default {
     methods: {
         getData: function(url) {
-            return fetch(url)
-                .then(response => response.json())
-                .then(json => { return json });
+            //à mettre en méthode dans le composant
 
         },
     }
-
 }

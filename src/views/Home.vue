@@ -1,9 +1,20 @@
 <!------------- 
-   TEMPLATE
+    TEMPLATE
 -------------->
 <template>
   <div class="home">
-    <h3>Fakeflix page d'accueil</h3>
+    <h3>...</h3>
+<br/><br/><br/><br/>
+
+<label for="test"> Nom:</label>
+<input id="test" type="text" placeholder="recherche" />
+<button >Ok</button>
+
+
+
+
+
+<br/><br/><br/><br/>
 
         <div v-if="movies.length > 0">
             <b-container fluid class="p-4 bg-ligth" >
@@ -20,10 +31,9 @@
 
         <div v-else>  
           <div>
-            Oups! Il n'y a pas de films pour l'instant
+            Oups! Il n'y a pas de films pour l'instant .
           </div>
         </div>
-
     </div>
 </template>
 
@@ -37,10 +47,12 @@ import fetchers from "../mixins/fetchers";
 
 export default {
   name: "Home",
- mixins:[fetchers],
+  mixins:[fetchers],
     data(){
         return{
-            urlMovie : 'https://api.themoviedb.org/3/search/movie?api_key=' + process.env.VUE_APP_API_KEY + '&query=',
+          // FLETCHER LA BONNE URL
+          urlMovie : 'https://api.themoviedb.org/3/movie/popular?api_key=c5b60a303647112413ef8353d8516f23&language=en-US&page=1'+ process.env.VUE_APP_API_KEY + '&query=',
+           // urlMovie : 'https://api.themoviedb.org/3/search/movie?api_key=' + process.env.VUE_APP_API_KEY + '&query=',
             urlImage : "http://image.tmdb.org/t/p/w342",
             search:'',
             movies:[]
@@ -64,7 +76,16 @@ export default {
       console.log(movie_id);
       location = `/movie/${movie_id}`
         }
-    }
+    },
+  created(){
+    console.log('tototata')
+    fetch(URL)
+      .then(response => response.json())
+      .then(json => { 
+        console.log(json)
+        this.movies=json;
+        });
+  }
 };
 
 
@@ -74,4 +95,6 @@ export default {
     STYLE 
 -------------->
 <style scoped>
+
+
 </style>

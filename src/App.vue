@@ -16,26 +16,6 @@
        <a href="/filmAV" class="nav-link">Films à voir </a>|
       <a href="/login" class="nav-link">Connexion </a>
     </nav>
-<!---
-   
-<div class="container-fluid bg-dark mb-5">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark container">
-    <a href="/" class="navbar-brand router-link-active">Accueil</a>
-    <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span>
-    </button>
-    <div id="navbarSupportedContent" class="collapse navbar-collapse"><ul class="navbar-nav mr-auto">
-      <li class="nav-item"><a href="/films-favoris" class="nav-link">Favoris</a></li>
-      <li class="nav-item"><a href="/films-a-voir" class="nav-link router-link-exact-active router-link-active">Films à voir</a>
-      </li>
-      </ul>
-      <form class="form-inline my-2 my-lg-0"><div data-v-f81aeb76="" class="search"><div data-v-f81aeb76="" class="input-group py-3"><input data-v-f81aeb76="" type="text" placeholder="Rechercher un film" class="form-control"><div data-v-f81aeb76="" class="input-group-append">
-        <button data-v-f81aeb76="" type="button" class="btn btn-secondary">
-          <i data-v-f81aeb76="" class="fa fa-search"></i>
-          </button>
-          </div></div></div>   
-     </form></div></nav></div>
--->
-
 
   <div id="search">
     <form action = "verif-form.php" method = "get">
